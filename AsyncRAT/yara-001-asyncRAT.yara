@@ -6,7 +6,7 @@ rule AsyncRAT_Robust_Heuristic
         description = "Robust AsyncRAT detection using behavioral & structural indicators"
         author = "bay-ar4fah"
         goal = "Obfuscation-resistant, low false positive"
-        confidence = "medium-high"
+        version = "1.0"
 
     strings:
 
