@@ -5,7 +5,7 @@ rule AsyncRAT_IOC_Enriched
     meta:
         description = "AsyncRAT detection with campaign-specific IoCs"
         author = "bay-ar4fah"
-        version = "1.0"
+        version = "2.0"
         type = "ioc_enriched"
         confidence = "high"
 
