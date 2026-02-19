@@ -7,7 +7,6 @@ rule AsyncRAT_IOC_Enriched
         author = "bay-ar4fah"
         version = "2.0"
         type = "ioc_enriched"
-        confidence = "high"
 
     strings:
 
