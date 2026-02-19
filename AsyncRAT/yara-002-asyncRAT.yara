@@ -17,8 +17,6 @@ rule AsyncRAT_IOC_Enriched
 
         $mutex_exact = "AsyncMutex_6SI8OkPnk" ascii wide
 
-        $op_string = "| Edit 3LOSH RAT" ascii wide
-
         $c2_1 = "Modyhr.ddnsfree.com" ascii wide nocase
         $c2_2 = "hoxt1.duckdns.org" ascii wide nocase
         $c2_3 = "luawhjkuk.localto.net" ascii wide nocase
