@@ -1,0 +1,40 @@
+import "pe"
+import "hash"
+
+rule XWorm_RAT_Specific_IoCs
+{
+    meta:
+        description = "Detects XWorm RAT based on extracted network C2s, dropped files, and specific PyInstaller/Donut behaviors"
+        author = "bay-ar4fah"
+        date = "2026-03-18"
+        reference_hash = "1beba7bcaf594abc134967d46daba76c2b554b2358df3e1b6dcc993e336e6490"
+        threat_name = "Trojan.XWorm.Python"
+
+    strings:
+        $c2_url1 = "https://pastebin.com/raw/NDJVLMNQu" ascii wide nocase
+        $c2_dom1 = "uziss.wtf:6000" ascii wide nocase
+        $c2_dom2 = "yassinbessen.store:6000" ascii wide nocase
+        $c2_dom3 = "linkpc.net" ascii wide nocase
+        $c2_ip1 = "46.247.108.170:6000" ascii wide
+
+        $file1 = "%PUBLIC%\\adbservice.exe" ascii wide nocase
+        $file2 = "C:\\Windows\\ltk60tfi.exe" ascii wide nocase
+        
+        $drop_hash1 = "e0e841022ed7bd7d1c9a5395c170bfb13027af58ac98c223a392677c68e7056a" ascii wide nocase
+        $drop_hash2 = "8f8b9e168acd625f1c5eefcec718739f477eee34e4498ebce85e554e14be98f9" ascii wide nocase
+
+        $py_ind1 = "PyInstaller" ascii wide nocase
+        $py_ind2 = "python3" ascii wide nocase
+
+    condition:
+        uint16(0) == 0x5A4D and 
+        (
+            hash.sha256(0, filesize) == "1beba7bcaf594abc134967d46daba76c2b554b2358df3e1b6dcc993e336e6490"
+            or
+            any of ($c2_*)
+            or
+            (any of ($file*) and any of ($py_ind*))
+            or
+            any of ($drop_hash*)
+        )
+}  
