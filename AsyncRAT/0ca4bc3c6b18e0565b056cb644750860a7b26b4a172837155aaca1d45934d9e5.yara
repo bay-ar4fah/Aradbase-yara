@@ -1,5 +1,4 @@
 import "pe"
-import "hash"
 
 rule IOC_Malware_0ca4bc3c
 {
