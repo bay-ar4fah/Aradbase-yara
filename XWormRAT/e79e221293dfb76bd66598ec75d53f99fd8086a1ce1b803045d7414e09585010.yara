@@ -1,5 +1,4 @@
 import "pe"
-import "hash"
 
 rule Malware_DLL_Downloader_XWorm_Alien
 {
