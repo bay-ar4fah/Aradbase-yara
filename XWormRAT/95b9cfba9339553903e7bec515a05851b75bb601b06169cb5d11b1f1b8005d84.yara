@@ -1,5 +1,4 @@
 import "pe"
-import "hash"
 
 rule Malware_Clipper_Downloader_Amadey_SmokeLoader
 {
