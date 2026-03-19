@@ -1,5 +1,4 @@
 import "pe"
-import "hash"
 
 rule APT_SideWinder_Fake_WindTerm_Installer
 {
