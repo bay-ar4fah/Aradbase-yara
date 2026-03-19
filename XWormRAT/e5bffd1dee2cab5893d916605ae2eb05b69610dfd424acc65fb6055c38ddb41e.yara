@@ -1,5 +1,4 @@
 import "pe"
-import "hash"
 
 rule Malware_Hybrid_XWorm_AsyncRAT_XMRig
 {
