@@ -1,5 +1,4 @@
 import "pe"
-import "hash"
 
 rule XWorm_RAT_Specific_IoCs
 {
