@@ -4,7 +4,7 @@ rule MAL_ELF_Go_DDoS_Flooder_abfa5a25 {
     meta:
         description = "Detects ELF Golang DDoS Flooder and persistence artifacts"
         author = "bay-ar4fah"
-        date = "2026-03-19"
+        date = "2026-05-31"
         malware_family = "DDoS Flooder"
      
     strings:
