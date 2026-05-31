@@ -4,7 +4,7 @@ rule MAL_ELF_Mirai_Botnet_MultiArch {
     meta:
         description = "Detects Mirai/Gafgyt Botnet payloads across SPARC, SuperH, and ARM architectures"
         author = "bay-ar4fah"
-        date = "2026-03-19"
+        date = "2026-05-31"
         malware_family = "Mirai / Gafgyt"
         reference_hash1 = "3bff1b00397d89f81ca0ad45a0403d4951d5f031ece85c26919ac7c0fc7dc81f"
         reference_hash2 = "b6390cdb45eb24738869b60f158e54678b7d1447bdd3b035697f91c175a1a705"
