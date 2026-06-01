@@ -1,6 +1,6 @@
 # Aradbase-YARA
 
-Aradbase-YARA is a research-focused repository containing YARA rules
+Aradbase-YARA is a research focused repository containing YARA rules
 developed for detecting and studying active malware families.
 
 ## Purpose
